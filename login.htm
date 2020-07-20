@@ -9,23 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
 	<link rel="stylesheet" href="style.css">
     <title>Login/Register Form</title>
-	
-	<script>  
-	function validateform(){  
-		var email=document.myform.email;  
-		var password=document.myform.password;  
-  
-		if (email.value==null || email.value==""){  
-			alert("Name can't be blank");  
-			email.focus();
-			return false;  
-		}else if(password.value.length<6){  
-			alert("Password must be at least 6 characters long.");  
-			password.focus();
-			return false;  
-		}  
-	}  
-	</script>
+	<script src="myscripts.js"></script>
 </head>
 <body>
 	<div>
@@ -55,23 +39,27 @@
 				<i class="fa fa-unlock-alt"></i>
 			</div>
 		</div>
+		<div class="form-group">
+			<input type="tel" id="inputMobileNumber" name="mobilenumber" class="form-control" placeholder="mobilenumber" required="" autofocus="">
+			<div class="input-group-addon">
+				<i class="fa fa-phone"></i>
+			</div>
+		</div>
+        <div class="form-group">
+			<input type="date" id="inputdob" name="dateOfBirth"class="form-control" required="" autofocus="">
+		</div>
         <button class="btn sign-in" type="submit"> SIGN IN</button>
 		</form>
 		<a style="float:left;padding-left:30px" href="#">Forgot your password?</a>
 		<a style="float:right;padding-right:30px" href="#">Register!</a>
-		<br>
-		<br>
 		<br>
 		<div class="or">
 			<hr style="float:left;width:45%;margin-left:30px" >
 			<p style="float:left;width:4%;text-align:center" >OR</p>
 			<hr style="float:left;width:46%">
 		</div>
-		<br>
-		<br>
         <button type="button" class="btn btn-fb"><i class="fa fa-facebook-f"></i></button>
 		<button type="button" class="btn btn-google"><i class="fa fa-google"></i></button>
-		<br>
 		<br>
 		<button class="btn epam" type="submit"> &lt; EPAM LOGIN &gt;</button>
 	</div>
